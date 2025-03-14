@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 
@@ -8,16 +8,19 @@ function page() {
 
     const { data: session } = useSession()
 
-      if (session) {
-        const router = useRouter()
-        router.push('/profile')
-      }
+    const router = useRouter()
+
+    useEffect(() => {
+        if (session !== undefined && session !== null) {
+            router.push('/profile')
+        }
+    }, [session, router])
 
 
 
   return (
     <div className='text-white py-14 container mx-auto'>
-      <h1 className='font-bold text-3xl text-center'>Login To Get Support From Your Fan's</h1>
+      <h1 className='font-bold text-3xl text-center'>Login To Get Support From Your Fan&rsquo;s</h1>
 
       {/* Social Button */} 
       <div className="socialBtns">
