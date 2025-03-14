@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 async function Username({ params }) {
   
@@ -8,13 +9,15 @@ async function Username({ params }) {
   return (
     <>
       <div className="CoverImg w-full bg-red-50 relative">
-        <img
-          className="object-cover w-full h-[350px]"
+        <Image
+          className="object-cover"
           src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/4842667/452146dcfeb04f38853368f554aadde1/eyJ3IjoxOTIwLCJ3ZSI6MX0%3D/18.gif?token-time=1743724800&token-hash=3jRRjnWnIycOk6k6K03qY-fepaDiVq5PShRw7Y2mnLQ%3D"
           alt="Background"
+          width={1920}
+          height={350}
         />
         <div className="profile absolute -bottom-17 right-[46%] border-2 border-white rounded-lg">
-          <img
+          <Image
             className="rounded-lg"
             width={115}
             height={115}
@@ -36,7 +39,7 @@ async function Username({ params }) {
             <h2 className="text-2xl font-bold my-5">Supporter&rsquo;s</h2>
             <ul className="mx-5 text-sm">
               <li className="my-4 gap-2 flex items-center">
-                <img className="self-start" src="avatar.gif" alt="User Avatar" width={32} />
+                <Image className="self-start" src="avatar.gif" alt="User Avatar" width={32} height={32} />
                 <span>
                   Faizan Donated <span className="font-bold">$30</span> with a
                   Message &quot;Lots of Love From My Side💖&quot;
@@ -44,7 +47,7 @@ async function Username({ params }) {
               </li>
 
               <li className="my-4 gap-2 flex items-center">
-                <img className="self-start" src="avatar.gif" alt="User Avatar" width={32} />
+                <Image className="self-start" src="avatar.gif" alt="User Avatar" width={32} height={32} />
                 <span>
                   Azlan Donated <span className="font-bold">$100</span> with a
                   Message &quot;We Support You Keep Working On Your Goal✌️&quot;
@@ -52,7 +55,7 @@ async function Username({ params }) {
               </li>
 
               <li className="my-4 gap-2 flex items-center">
-                <img className="self-start" src="avatar.gif" alt="User Avatar" width={32} />
+                <Image className="self-start" src="avatar.gif" alt="User Avatar" width={32} height={32} />
                 <span>
                   Yasir Donated <span className="font-bold">$5</span> with a
                   Message &quot;Love From Pakistan&quot;
