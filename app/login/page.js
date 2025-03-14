@@ -1,26 +1,24 @@
-"use client"
+"use client";
 
-import React, { useEffect } from 'react'
-import { useSession, signIn, signOut } from "next-auth/react"
-import { useRouter } from 'next/navigation'
+import React, { useEffect } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-function page() {
+function Page() {
 
-    const { data: session } = useSession()
-
-    const router = useRouter()
+    const { data: session } = useSession();
+    const router = useRouter();
 
     useEffect(() => {
         if (session) {
-            router.push('/profile')
+            router.push("/profile");
         }
-    }, [session, router])
-
+    }, [session, router]);
 
 
   return (
     <div className='text-white py-14 container mx-auto'>
-      <h1 className='font-bold text-3xl text-center'>Login To Get Support From Your Fan&rsquo;s</h1>
+      <h1 className='font-bold text-3xl text-center'>Login To Get Support From Your Fan's</h1>
 
       {/* Social Button */} 
       <div className="socialBtns">
@@ -160,7 +158,7 @@ function page() {
   )
 }
 
-export default page
+export default Page
 
 
 
